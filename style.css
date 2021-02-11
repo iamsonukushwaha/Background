@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=poppins:400,500,600,700,800,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /*background: #000200;*/
+    background: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section div:nth-child(1), section div:nth-child(2), section div:nth-child(3), section div:nth-child(4), section div:nth-child(5), section div:nth-child(6), section div:nth-child(7), section div:nth-child(8), section div:nth-child(9), section div:nth-child(10), section div:nth-child(11), section div:nth-child(12), section div:nth-child(13), section div:nth-child(14), section div:nth-child(15), section div:nth-child(16), section div:nth-child(17), section div:nth-child(18), section div:nth-child(19), section div:nth-child(20){
+    color: transparent;
+    font-weight: 900;
+    filter: brightness(90%);
+}
+section .row{
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+    white-space: nowrap;
+    font-size: 80px;
+    transform: rotate(-30deg);
+}
+i{
+    color: white;
+    transition: 1s;
+    padding: 0 5px;
+    user-select: none;
+    cursor: default;
+}
+i:hover{
+    transition: 0s;
+    color: #0f0;
+    text-shadow: 0 0 120px #0f0;
+}
+section .row:nth-child(odd) div:nth-child(1){
+    animation: animate1 80s linear infinite;
+    animation-delay: -80s;
+}
+section .row:nth-child(odd) div:nth-child(2){
+    animation: animate2 80s linear infinite;
+    animation-delay: -40s;
+}
+@keyframes animate1{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+@keyframes animate2{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+}
+section .row:nth-child(even) div:nth-child(1){
+    animation: animate3 80s linear infinite;
+    animation-delay: -80s;
+}
+section .row:nth-child(even) div:nth-child(2){
+    animation: animate4 80s linear infinite;
+    animation-delay: -40s;
+}
+@keyframes animate3{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+@keyframes animate4{
+    0%{
+        transform: translateX(-200%);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+section .star{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    animation: animate 8s ease-in-out infinite,
+               backgroundmove 16s linear infinite;
+}
+section .star.star1{
+    animation-delay: 0s;
+    background: url(./Images/star1.png);
+}
+section .star.star2{
+    animation-delay: -1s;
+    background: url(./Images/star2.png);
+}
+section .star.star3{
+    animation-delay: -2s;
+    background: url(./Images/star3.png);
+}
+section .star.star4{
+    animation-delay: -3s;
+    background: url(./Images/star4.png);
+}
+section .star.star5{
+    animation-delay: -4s;
+    background: url(./Images/star5.png);
+}
+section .star.star6{
+    animation-delay: -5s;
+    background: url(./Images/star6.png);
+}
+section .star.star7{
+    animation-delay: -6s;
+    background: url(./Images/star7.png);
+}
+section .star.star8{
+    animation-delay: -7s;
+    background: url(./Images/star8.png);
+}
+@keyframes animate{
+    0%,20%,40%,60%,80%,100%{
+        opacity: 0;
+    }
+    10%,30%,50%,70%,90%{
+        opacity: 1;
+    }
+}
+@keyframes backgroundmove{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(2);
+    }
+}
